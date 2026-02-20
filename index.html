@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Fitness Jaipur | Premium Gym & CrossFit Mansarovar</title>
+    
+    <meta name="description" content="Sky Fitness Jaipur: 4.9★ rated gym in Mansarovar. Featuring CrossFit, elite equipment, and expert trainers. Book your free trial today!">
+    <meta name="keywords" content="Sky Fitness Jaipur, Gym in Mansarovar, CrossFit Jaipur, Best Gym Gopalpura Bypass">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=DM+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        /* ════════════════════════════════════
+           SYSTEM THEME ENGINE (Auto-Adaptive)
+        ════════════════════════════════════ */
+        :root {
+            --red: #FF2D2D;
+            --lime: #C6FF4E;
+            --wa-green: #25D366;
+            --star: #FFB800;
+        }
+
+        /* Light Mode Defaults */
+        :root {
+            --bg: #F5F5F5;
+            --surface: #FFFFFF;
+            --text: #111111;
+            --text-sub: #555555;
+            --border: rgba(0,0,0,0.1);
+            --glass: rgba(255, 255, 255, 0.8);
+            --map-filter: none;
+        }
+
+        /* Dark Mode Overrides */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0A0A0A;
+                --surface: #121212;
+                --text: #F0F0F0;
+                --text-sub: #A0A0A0;
+                --border: rgba(255,255,255,0.1);
+                --glass: rgba(18, 18, 18, 0.8);
+                --map-filter: invert(90%) hue-rotate(180deg) brightness(0.9);
+            }
+        }
+
+        /* ════════════════════════════════════
+           BASE STYLES
+        ════════════════════════════════════ */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        h1, h2, h3, .logo { font-family: 'Bebas Neue', cursive; letter-spacing: 1px; }
+
+        /* NAVBAR */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 28px; text-decoration: none; color: var(--text); }
+        .logo span { color: var(--red); }
+        
+        .pill-btn {
+            background: var(--red); color: white; padding: 10px 20px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px;
+        }
+
+        /* HERO SECTION */
+        .hero { padding: 80px 0; text-align: center; }
+        .badge { 
+            display: inline-block; background: rgba(198, 255, 78, 0.1); 
+            color: var(--lime); padding: 6px 16px; border-radius: 20px; 
+            font-family: 'DM Mono', monospace; font-size: 12px; margin-bottom: 20px;
+        }
+        .hero h1 { font-size: clamp(60px, 10vw, 100px); line-height: 0.9; margin-bottom: 20px; }
+        .hero p { color: var(--text-sub); max-width: 600px; margin: 0 auto 30px; font-size: 18px; }
+
+        /* GRID & CARDS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin: 40px 0; }
+        .card { 
+            background: var(--surface); border: 1px solid var(--border); 
+            padding: 32px; border-radius: 24px;
+        }
+        .rating { color: var(--star); font-size: 18px; margin-bottom: 10px; }
+
+        /* CAROUSEL */
+        .carousel-container {
+            display: flex; gap: 20px; overflow-x: auto; 
+            padding-bottom: 20px; scroll-snap-type: x mandatory;
+            scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .carousel-container::-webkit-scrollbar { display: none; }
+        .carousel-card { min-width: 300px; flex: 0 0 auto; scroll-snap-align: start; }
+
+        /* BUTTONS */
+        .btn-list { display: flex; flex-direction: column; gap: 12px; }
+        .action-btn {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700;
+        }
+        .btn-call { background: var(--text); color: var(--bg); }
+        .btn-wa { background: var(--wa-green); color: white; }
+        .btn-map { border: 1px solid var(--border); color: var(--text); display: inline-flex; margin-top: 20px;}
+
+        /* MAP */
+        .map-container { height: 400px; border-radius: 24px; overflow: hidden; border: 1px solid var(--border); }
+        .map-container iframe { filter: var(--map-filter); width: 100%; height: 100%; border: 0; }
+
+        /* FLOAT WA */
+        .wa-float {
+            position: fixed; bottom: 30px; right: 30px; 
+            background: var(--wa-green); width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); z-index: 1000;
+        }
+
+        @media (max-width: 600px) { .hero h1 { font-size: 55px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="#" class="logo">SKY<span>FITNESS</span></a>
+            <a href="tel:07568798310" class="pill-btn">Call Now</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <span class="badge">● MANSAROVAR, JAIPUR</span>
+            <h1>TRANSFORM YOUR<br><span style="color:var(--red)">LIFESTYLE</span></h1>
+            <p>Jaipur's premier fitness destination featuring elite CrossFit, clean facilities, and the most supportive community.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <div class="rating">4.9 ★★★★★</div>
+                <h3 style="font-size: 32px;">LOCATION & CONTACT</h3>
+                <p style="color: var(--text-sub); margin-bottom: 20px;">
+                    ML Tower, 1st Floor, Metro Piller No-01, Teja Circle, Gopalpura Bypass Rd, Jaipur.
+                </p>
+                <div class="btn-list">
+                    <a href="tel:07568798310" class="action-btn btn-call">📞 Call 075687 98310</a>
+                    <a href="https://wa.me/917568798310?text=Hi Sky Fitness! I'd like to know about memberships." class="action-btn btn-wa">💬 WhatsApp Chat</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="font-size: 32px;">GYM HIGHLIGHTS</h3>
+                <ul style="list-style: none; color: var(--text-sub);">
+                    <li style="margin-bottom: 10px;">⚡ <strong>CrossFit Specialist</strong></li>
+                    <li style="margin-bottom: 10px;">🏋️ Premium Strength Equipment</li>
+                    <li style="margin-bottom: 10px;">🧼 Clean & Maintained Facility</li>
+                    <li>⏰ Open Daily: Closes 10 PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 40px 0 20px;">MEMBER REVIEWS</h2>
+        <div class="carousel-container">
+            <div class="card carousel-card">
+                <div class="rating">★★★★★</div>
+                <p>"Wide variety of equipment including cardio machines, free weights, and resistance machines. Very clean."</p>
+                <p style="margin-top:10px; font-weight:bold; font-size:12px;">— Google Summary</p>
+            </div>
+            <div class="card carousel-card">
+                <div class="rating">★★★★★</div>
+                <p>"Energetic atmosphere and encouraging trainers. They offer great group classes and flexible hours."</p>
+                <p style="margin-top:10px; font-weight:bold; font-size:12px;">— Verified Member</p>
+            </div>
+            <div class="card carousel-card">
+                <div class="rating">★★★★★</div>
+                <p>"Best trainers in Jaipur. It gets a bit crowded during peak hours after work, but the energy is worth it!"</p>
+                <p style="margin-top:10px; font-weight:bold; font-size:12px;">— Local Guide</p>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 60px 0 20px;">FIND US</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.435422474635!2d75.7600813!3d26.8579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5f16f3984ef%3A0x6b77e20b3309a6c4!2sSky%20Fitness!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        <div style="text-align: center; margin-bottom: 80px;">
+            <a href="https://maps.google.com/maps?q=Sky+Fitness+Jaipur+Mansarovar" target="_blank" class="action-btn btn-map">📍 Open Navigation</a>
+        </div>
+    </div>
+
+    <a href="https://wa.me/917568798310" class="wa-float" target="_blank">
+        <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.891 1.735 5.86l-.999 3.647 3.753-.999z"/></svg>
+    </a>
+
+    <footer style="text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-sub); font-size: 13px;">
+        © 2026 SKY FITNESS JAIPUR · MANSAROVAR · 075687 98310
+    </footer>
+
+</body>
+</html>
